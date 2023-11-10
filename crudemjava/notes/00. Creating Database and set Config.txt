@@ -1,0 +1,75 @@
+00. Creating Database and set Config
+
+01.
+Starting with IDE, we create a Java Project and also a folder called "resources" or something like, and paste MySQL scripts and Connector.
+
+02.
+Inside the folder "src", create a package. Using the example: "br.com.agenda.model".
+
+03.
+And, inside the class, we set objects using as reference what I've done on SQL script.
+Example:
+
+SQL Script
+	Table contatos;
+	id int,
+	nome varchar,
+	idade int,
+	dataCadastro date.
+
+Java objects
+	public class Agenda {
+    	private int  id;
+    	private String  nome;
+    	private int idade;
+    	private Date dataCadastro;
+	}
+
+The type of date on Java is java.util, that imports a package to help on creating a Date.
+
+04.
+After this, generate Getters and Setters. Follow this steps:
+	- Source;
+	- Getters and Setters (on Netbeans is "insert code...").
+
+05.
+Now, we'll do that Java and MySQL be connected with driver arqchive, through the java package. Steps:
+	- Click on java project;
+	- Properties;
+	- Build path (On Netbeans is: Build > Compile > Manage Java Plataforms > Sources);
+	- Add JAR File;
+	- Search for MySQL connector on "resources" folder;
+	- And add driver.
+
+06.
+There's a package administrators like MAVEN that helps to do this automatically, but that's how works on teamwork.
+
+07.
+Now, we'll mentionate where's the connection between Java and Database creating a "factory" of connections. Example:
+	- Creating package: "br.com.agenda.factory";
+	- Creating a class cakked "ConnectionFactory".
+
+08.
+And now, inside the class ConnectionFactory, this are the steps to config:
+	- public static final String USERNAME = "root";
+	(we are passing as final because mysql username doesn't change)
+	- public static final String PASSWORD = "";
+	- Select the path of database with SQL Door (3306)
+		- the connection MUST be a JDBC;
+		- and also, connect with the database name;
+		- Example: public static final String DATABASE_URL = "jdbc:mysql//localhost:3306/agenda";
+
+09.
+And then, the connection with database, referencing mysql driver:
+	- public static Connection (sql connection) createConnectionToMySQL {
+		Class.forName ("com.mysql.jdbc.Driver"); //Class is carrying by JVM.
+	}
+10.
+To avoid full fill JVM space and overload MySQL server, inside of PSVM we set some configurations to reconnect user one time only and save connection, instead of connect every turn.
+Example:
+	- Connection con = creatConnectionToMySQL (); //Call method
+	- if (con!=null){ // "if" avoid to connect several times
+		System.out.println ("Connection with success!");
+		con.close ();
+	}
+	
