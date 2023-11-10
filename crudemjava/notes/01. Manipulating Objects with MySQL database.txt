@@ -1,5 +1,77 @@
 01. Manipulating Objects with MySQL database
 
 01.
- 
+Defining the structure of manipulate objects with sql, we use DAO (Decentralized autonomous organization) structure, that intermediate the path between Java Classes and MySQL, and apply our business rules.
 
+02.
+And starting, we creat a package properly for DAO and also a class, importing agenda model class:
+	- br.com.agenda.dao
+	- ContatoDAO
+	- import br.com.agenda.model.Contato;
+
+Also connection and prepare statement imports:
+
+	import java.sql.PreparedStatement;
+	import com.mysql.jdbc.Connection;
+
+
+03.
+Also, creat a method as a Instance of class "Contato", to do the insert.
+	
+	public void save (Contato contato){
+
+	}
+
+Inside the method, we do an Insert Into for SQL, passing parameters as "?", that converts into a data when are requesting connection with database:
+	
+	String sql = "insert into contatos (nome, idade, datacadastro) values (?, ?, ?)";
+
+To call the Connection variable, we insert an Connection object as null. This will be used to help us to connect.
+
+	Connection conn = null;
+	
+And then, we'll gonna use a class to execute the structure of connection between Java and SQL.
+
+	PrepareStatement (com.sql) pstm = null;
+
+Now, we'll set a TryCatch to verify if Sever is working, using our class ConnectionFactory.
+	
+	conn = (Connection) ConnectionFactory.createConnectionToMySQL();
+
+Until inside TryCatch, we set a PrepareStatement class connected with our variable "conn", using a parse to String.
+	
+	pstm = (PreapareStatement) conn.prepareStatement(sql); // do a parse String using the data inside "sql" variable
+
+To pass information between class and the prepareStatement, we do a parse for each data and their primitive type that are waiting by Query and use the function Get.
+	
+	pstm.setString (1, contato.getNome());
+	pstm.setInt (2, contato.getIdade());
+	pstm.setDate (3, new Date(contato.getDataCadastro().getTime())));
+
+	Structure explained:
+	preapreSatement variable + set instance of data type waiting by Query + position of the object + pass String (contato) + getObjectFromAntherClass
+
+Closing and execute the statement:
+
+	pstm.execute;
+
+To finish, if something different happend, we do a Catch with an Exception:
+	cacth (Exception e) {
+		e.printStackTrace();
+	}
+
+So, if everything goes well, we do a "finally" to close all connections and flow of statements:
+	finally {
+	try{
+	if (conn!=null){
+	conn.close();
+	}
+	if (pstm!=null){
+	pstm.close();
+	}
+	}
+	}
+If something strange happens:
+	cacth (Exception e) {
+		e.printStackTrace();
+	}
