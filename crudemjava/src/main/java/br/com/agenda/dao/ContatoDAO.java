@@ -3,13 +3,13 @@ package br.com.agenda.dao;
 import br.com.agenda.factory.ConnectionFactory;
 import br.com.agenda.model.Contato;
 
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import com.mysql.jdbc.Connection;
 
-
+import javax.swing.JOptionPane;
 
 public class ContatoDAO {
 	
@@ -29,6 +29,9 @@ public class ContatoDAO {
 			pstm.setDate (3, new Date(contato.getDataCadastro().getTime()));
 			
 			pstm.execute();
+			//JOptionPane.showMessageDialog(null,"Contato salvo com sucesso!");
+			
+			System.out.println("Contato salvo com sucesso!");
 		}catch (Exception e){
 			e.printStackTrace();
 		}
@@ -47,10 +50,10 @@ public class ContatoDAO {
 	}
 
 	//READ
-	public List<Contato> getContatos(){
+	/*public List<Contato> getContatos(){
 		String sql = "select * from contatos;";
 		return null;
-	}
+	}*/
 	
 	//UPDATE
 	public void update (Contato contato) {

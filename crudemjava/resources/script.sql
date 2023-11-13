@@ -8,3 +8,7 @@ dataCadastro date
 );
 
 desc contatos;
+
+select * from agenda.contato;
+
+alter table contatos rename to contato;
