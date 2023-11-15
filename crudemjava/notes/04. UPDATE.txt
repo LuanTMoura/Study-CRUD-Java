@@ -1,0 +1,54 @@
+04. UPDATE
+
+01.
+To update, is simple as the create example, the difference will be the structure of SQL Query, in this case, with the use of UPDATE DML function.
+
+02.
+So, means that in Main class, we just change the name of the object created.
+
+03.
+So, inside the example:
+
+class DAO:
+
+	public void update (Contact contact) {
+		
+		String sql = "update contact set name = ?, age = ?, registerDate = ?"+"where id = ?;";
+		
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		try {
+		conn = ConnectionFactory.createConnectionToMySQL();
+		pstm = conn.prepareStatement(sql);
+		
+		pstm.setString(1, contact.getName());
+		pstm.setInt(2, contact.getAge());
+		pstm.setDate(3, new Date (contact.getRegisterDate().getTime()));
+		pstm.setInt(4, contact.getId());
+		
+		pstm.execute();
+		
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(conn!=null) {
+					conn.close();
+				}
+				if(pstm!=null) {
+					pstm.close();
+				}
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+class Main:
+
+	Contact contactUpdate = new Contact();
+	contactUpdate.setName("Maria Esteves Neves");
+	contactUpdate.setAge(58);
+	contactUpdate.setRegisterDate(new Date());
+	contactUpdate.setId(4);

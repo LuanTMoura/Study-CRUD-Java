@@ -7,7 +7,7 @@ Defining the structure of manipulate objects with sql, we use DAO (Decentralized
 And starting, we creat a package properly for DAO and also a class, importing agenda model class:
 	- br.com.agenda.dao
 	- ContatoDAO
-	- import br.com.agenda.model.Contato;
+	- import br.com.agenda.model.Contact;
 
 Also connection and prepare statement imports:
 

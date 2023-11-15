@@ -1,0 +1,71 @@
+03. READ
+
+01.
+First of all, it's iportant to understand the unique difference between this part, for the other:
+The use of ResultSet. RST is used to receive data resources, which means carry something from database (as an Array).
+
+02.
+And also, the difference of READ is that in Java we use java.util.List import and the syntax List<>.
+
+03.
+So, the path is similar to each function: set connection, set peprarestatement and try the connection with database. 
+In this case, create a ResulSet object with preparestatement executing Query.
+
+04.
+After setting the main configurations, we create a While structure for RST.
+And RST is suposed to receive each data from the JavaList statement.
+
+05.
+Inside while loop, we create a new object of "contato" (from the example), create the setters and add this object for JavaList.
+
+06.
+To finish, use catch exception and finally closing the settings, also returning 
+
+07.
+Example from the class of DAO structure:
+	public List<Contact> listContact() {
+		String sql ="select * from contact;";
+		
+		List<Contact> contacts = new ArrayList <Contact> ();
+		
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		ResultSet rset = null;
+		
+	try {
+		conn = ConnectionFactory.createConnectionToMySQL();
+		pstm = conn.prepareStatement(sql);
+		
+		rset = pstm.executeQuery();
+		
+		while (rset.next()) {
+			Contact contact = new Contact();
+			
+			contact.setId(rset.getInt("id"));
+			contact.setAge(rset.getInt("age"));
+			contact.setName(rset.getString("name"));
+			contact.setRegisterDate(rset.getDate ("registerDate"));
+			
+			contacts.add(contact);
+		}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				try {
+					if (conn!=null) {
+						conn.close();
+					}
+					if (rset!=null) {
+						rset.close();
+					}
+					if (pstm!=null) {
+						pstm.close();
+					}
+				}catch (Exception e){
+				e.printStackTrace();
+				}
+			}
+		return contacts;
+			
+		}

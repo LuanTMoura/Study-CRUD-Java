@@ -1,21 +1,46 @@
 package br.com.agenda.aplicacao;
 import java.util.Date;
 
-import br.com.agenda.model.Contato;
+import br.com.agenda.model.Contact;
 import br.com.agenda.dao.*;
+
 
 public class Main {
  public static void main (String [] args) {
 	 
-	 //ContatoDAO contatoDao = new ContatoDAO ();
-	 Contato contato = new Contato ();
-	 contato.setNome("João");
-	 contato.setIdade(55);
-	 contato.setDataCadastro(new Date());
+	 //CREATE
+	 Contact contact = new Contact ();
+	 contact.setName("João Paulo");
+	 contact.setAge(30);
+	 contact.setRegisterDate(new Date());
 	 
-	 //contatoDao.save(contato);
+	 ContactDAO contactDao = new ContactDAO ();
+	 contactDao.save(contact);
+	 /*
+	 or:
+	 new ContactDAO().save(contact);
+	 */
 	 
-	 new ContatoDAO().save(contato);
+	//READ
+	for(Contact c : contactDao.listContact()) {
+		    System.out.println("------------------------------");
+		 	System.out.println("Contact: "+c.getName());
+		 	System.out.println("Age: "+c.getAge());
+		 	System.out.println("Register Date: "+c.getRegisterDate());
+		 	System.out.println("Id: "+c.getId());
+		 	System.out.println("------------------------------");
+	 }
+	
+	//UPDATE
+	Contact contactUpdate = new Contact();
+	contactUpdate.setName("Maria Esteves Neves");
+	contactUpdate.setAge(58);
+	contactUpdate.setRegisterDate(new Date());
+	contactUpdate.setId(4);
 	 
+	//contactDao.update(contactUpdate);
+	
+	//DELETE
+	//contactDao.deleteById(3);
  }
 }

@@ -1,14 +1,12 @@
-create database agenda;
+create database contactlist;
 
-create table contatos (
+create table contact (
 id int not null auto_increment primary key,
-nome varchar (40),
-idade int,
-dataCadastro date
+name varchar (40),
+age int,
+registerDate date
 );
 
-desc contatos;
+describe contact;
 
-select * from agenda.contato;
-
-alter table contatos rename to contato;
+select * from contact;

@@ -1,0 +1,32 @@
+02. CREATE
+
+01.
+To start creating the function of CREAT from CRUD, is very simple:
+	- First, create a new package called aplication (with the other padronization of packages);
+	- Class called Main (because is here that evrything gonna happen);
+	- PSVM;
+	- Inside PSVM: a new DAO (ContatoDAO object and a new register object (Contato);
+	- Create a set for every data (name, age etc);
+	- And call the method that register inforamtion inside DataBase (save or register, from DAO);
+
+02.
+Example inside the code:
+package br.com.agenda.aplicacao;
+import java.util.Date;
+
+import br.com.agenda.model.Contact;
+import br.com.agenda.dao.*;
+
+public class Main {
+ public static void main (String [] args) {
+	 
+	Contact contact = new Contact ();
+	contact.setName("João Paulo");
+	contact.setAge(30);
+	contact.setRegisterDate(new Date());
+	 
+	ContactDAO contactDao = new ContactDAO ();
+	contactDao.save(contact);
+	 
+ }
+}

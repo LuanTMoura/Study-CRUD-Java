@@ -1,0 +1,16 @@
+03.5. READ PART 2
+
+01.
+Following the same steps of CREAT, it's time to use the class Main. To do this, we create a For-Each structure.
+Which means: for each data passed by DAO structure JavaList, we show them for us.
+
+02.
+So, code structure on the exampe will be:
+	for(Contact c : contactDao.listContact()) {
+		 System.out.println("------------------------------");
+		 System.out.println("Contact: "+c.getName());
+		 System.out.println("Age: "+c.getAge());
+		 System.out.println("Register Date: "+c.getRegisterDate());
+		 System.out.println("Id: "+c.getId());
+		 System.out.println("------------------------------");
+	 }
