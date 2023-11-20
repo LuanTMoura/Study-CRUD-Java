@@ -1,0 +1,42 @@
+05. DELETE
+
+01.
+The unique difference between this function comparated by others is that we gonna use on the query the command DELET FROM and don't need to creat one more register.
+
+02.
+So, code is:
+
+class DAO:
+
+	public void deleteById(int id) {
+		String sql = "delete from contact where id = ?;";
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		
+		try {
+			conn = ConnectionFactory.createConnectionToMySQL();
+			pstm = conn.prepareStatement(sql);
+			
+			pstm.setInt(1, id);
+		
+			pstm.execute();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstm!=null) {
+				pstm.close();	
+				}
+				if(conn!=null) {
+					conn.close();
+				}
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+class Main:
+
+contactDao.deleteById(3);
