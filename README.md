@@ -1,11 +1,6 @@
 <span style="display:block;text-align:center">![javajdbc](https://github.com/LuanTMoura/Study-CRUD-Java/assets/106880830/17fb89db-ced1-4d76-b0d0-1c5d5177305a)</span>
 
-## Português-Brasil | Sumário
 
-- <a href="#Estudo-de-CRUD-em-Java">Estudo de CRUD em Java</a>
-	- <a href="#Configurações">Configurações</a>
-	- <a href="#Fonte-do-conteúdo-aprendido">Fonte do conteúdo aprendido</a>
-	- <a href="#o-que-foi-aprendido?">O que foi aprendido?</a>
 
 # Estudo de CRUD em Java
 
