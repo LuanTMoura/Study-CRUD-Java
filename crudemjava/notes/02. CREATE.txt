@@ -14,8 +14,8 @@ Example inside the code:
 package br.com.agenda.aplicacao;
 import java.util.Date;
 
-import br.com.agenda.model.Contact;
-import br.com.agenda.dao.*;
+import com.contacts.model.Contact;
+import com.contacts.dao.*;
 
 public class Main {
  public static void main (String [] args) {

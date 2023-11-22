@@ -4,7 +4,7 @@
 Starting with IDE, we create a Java Project and also a folder called "resources" or something like, and paste MySQL scripts and Connector.
 
 02.
-Inside the folder "src", create a package. Using the example: "br.com.agenda.model".
+Inside the folder "src", create a package. Using the example: "com.contacts.model".
 
 03.
 And, inside the class, we set objects using as reference what I've done on SQL script.
@@ -46,7 +46,7 @@ There's a package administrators like MAVEN that helps to do this automatically,
 
 07.
 Now, we'll mentionate where's the connection between Java and Database creating a "factory" of connections. Example:
-	- Creating package: "br.com.agenda.factory";
+	- Creating package: "com.contacts.factory";
 	- Creating a class cakked "ConnectionFactory".
 
 08.

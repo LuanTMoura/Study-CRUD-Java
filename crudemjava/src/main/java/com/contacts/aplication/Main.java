@@ -1,8 +1,8 @@
-package br.com.agenda.aplicacao;
+package com.contacts.aplication;
 import java.util.Date;
 
-import br.com.agenda.model.Contact;
-import br.com.agenda.dao.*;
+import com.contacts.dao.*;
+import com.contacts.model.Contact;
 
 
 public class Main {

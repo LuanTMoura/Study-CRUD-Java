@@ -1,4 +1,4 @@
-package br.com.agenda.model;
+package com.contacts.model;
 
 import java.util.Date;
 

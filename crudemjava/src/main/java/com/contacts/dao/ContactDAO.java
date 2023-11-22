@@ -1,7 +1,4 @@
-package br.com.agenda.dao;
-
-import br.com.agenda.factory.ConnectionFactory;
-import br.com.agenda.model.Contact;
+package com.contacts.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -9,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.contacts.factory.ConnectionFactory;
+import com.contacts.model.Contact;
 
 public class ContactDAO {
 	
