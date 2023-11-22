@@ -1,4 +1,4 @@
-package com.contacts.aplication;
+package com.contacts.application;
 import java.util.Date;
 
 import com.contacts.dao.*;
