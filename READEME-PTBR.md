@@ -1,6 +1,6 @@
 <span style="display:block;text-align:center">![javajdbc](https://github.com/LuanTMoura/Study-CRUD-Java/assets/106880830/17fb89db-ced1-4d76-b0d0-1c5d5177305a)</span>
 
-## Português-Brasil 🟢🟡 | índice
+## índice
 * [Estudo de CRUD em Java](#estudo-de-crud-em-java)
 	* [Configurações](#configurações)
 	* [Fonte do conteúdo aprendido](#fonte-do-conteúdo-aprendido)
