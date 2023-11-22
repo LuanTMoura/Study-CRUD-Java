@@ -4,4 +4,4 @@
 
 [> Português-Brasil 🟢🟡]()
 
-[> English 🔵🔴⚪]()
+[> English 🔵🔴⚪](https://github.com/LuanTMoura/Study-CRUD-Java/blob/main/README-EN.md)
