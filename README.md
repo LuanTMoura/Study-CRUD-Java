@@ -1,10 +1,15 @@
 <span style="display:block;text-align:center">![javajdbc](https://github.com/LuanTMoura/Study-CRUD-Java/assets/106880830/17fb89db-ced1-4d76-b0d0-1c5d5177305a)</span>
 
+## Português-Brasil | Sumário
 
-### PT-BR 🟢🟡
+- <a href="#Estudo-de-CRUD-em-Java">Estudo de CRUD em Java</a>
+	- <a href="#Configurações">Configurações</a>
+	- <a href="#Fonte-do-conteúdo-aprendido">Fonte do conteúdo aprendido</a>
+	- <a href="#O-que-foi-aprendido?">O que foi aprendido?</a>
+
 # Estudo de CRUD em Java
 
-Nesse repositório busquei documentar o início do meu estudo com JDBC e como aplicar MySQL em uma regra de negócio, no caso, a DAO, construindo um CRUD (Create, Read, Update e Delete).
+Nesse repositório busquei documentar o início do meu estudo com JDBC, aplicando e conectando o Java ao MySQL usando os design patterns DAO e Factory, a fim de construir um CRUD (Create, Read, Update e Delete).
 
 ## Configurações
 
