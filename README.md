@@ -1,6 +1,6 @@
-<span style="display:block;text-align:center">![javajdbc](https://github.com/LuanTMoura/Study-CRUD-Java/assets/106880830/17fb89db-ced1-4d76-b0d0-1c5d5177305a)</span>
+<div align="center"><img decoding="async" loading="lazy" width="300" height="300" data-id="1371" src="https://hardikchavda.in/wp-content/uploads/2022/08/javajdbc.png" alt="" class="wp-image-1371" srcset="https://hardikchavda.in/wp-content/uploads/2022/08/javajdbc.png 300w, https://hardikchavda.in/wp-content/uploads/2022/08/javajdbc-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></div>
 
-# Selecione sua língua | Select Language
+  # Selecione sua língua | Select Language
 
 [> Português-Brasil 🟢🟡](https://github.com/LuanTMoura/Study-CRUD-Java/blob/main/READEME-PTBR.md)
 
