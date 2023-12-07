@@ -2,8 +2,9 @@ package com.contacts.model;
 
 import java.util.Date;
 
+
 public class Contact {
-	private int  id;
+    private int  id;
     private String  name;
     private int age;
     private Date registerDate;
